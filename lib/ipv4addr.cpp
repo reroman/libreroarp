@@ -15,8 +15,7 @@ using namespace reroman;
 IPv4Addr::IPv4Addr( uint32_t addr ) noexcept
 : data( {addr} ){}
 
-	IPv4Addr::IPv4Addr( string addr )
-throw( invalid_argument )
+IPv4Addr::IPv4Addr( string addr )
 {
 	setAddr( addr );
 }
@@ -47,14 +46,12 @@ bool IPv4Addr::isValidNetmask( void ) const noexcept
 }
 
 void IPv4Addr::setAddr( string addr )
-	throw( invalid_argument )
 {
 	if( !inet_aton( addr.c_str(), &data ) )
 		throw invalid_argument( addr + " is not a valid IPv4 address" );
 }
 
 IPv4Addr IPv4Addr::operator+( int n ) const
-	throw( overflow_error, underflow_error )
 {
 	int64_t tmp = ntohl( data.s_addr );
 	tmp += n;
@@ -68,7 +65,6 @@ IPv4Addr IPv4Addr::operator+( int n ) const
 }
 
 IPv4Addr IPv4Addr::operator-( int n ) const
-	throw( overflow_error, underflow_error )
 {
 	int64_t tmp = ntohl( data.s_addr );
 	tmp -= n;
@@ -82,7 +78,6 @@ IPv4Addr IPv4Addr::operator-( int n ) const
 }
 
 IPv4Addr& IPv4Addr::operator++( void )
-	throw( overflow_error )
 {
 	int64_t tmp = ntohl( data.s_addr );
 	tmp++;
@@ -95,7 +90,6 @@ IPv4Addr& IPv4Addr::operator++( void )
 }
 
 IPv4Addr IPv4Addr::operator++( int )
-	throw( overflow_error )
 {
 	IPv4Addr res( *this );
 	int64_t tmp = ntohl( data.s_addr );
@@ -109,7 +103,6 @@ IPv4Addr IPv4Addr::operator++( int )
 }
 
 IPv4Addr& IPv4Addr::operator--( void )
-	throw( underflow_error )
 {
 	int64_t tmp = ntohl( data.s_addr );
 	tmp--;
@@ -122,7 +115,6 @@ IPv4Addr& IPv4Addr::operator--( void )
 }
 
 IPv4Addr IPv4Addr::operator--( int )
-	throw( underflow_error )
 {
 	IPv4Addr res( *this );
 	int64_t tmp = ntohl( data.s_addr );
@@ -136,7 +128,6 @@ IPv4Addr IPv4Addr::operator--( int )
 }
 
 IPv4Addr IPv4Addr::getFromInterface( string ifname )
-	throw( system_error )
 {
 	int sockfd;
 	struct ifreq nic;
@@ -159,7 +150,6 @@ IPv4Addr IPv4Addr::getFromInterface( string ifname )
 }
 
 IPv4Addr IPv4Addr::getNmaskFromInterface( string ifname )
-	throw( system_error )
 {
 	int sockfd;
 	struct ifreq nic;

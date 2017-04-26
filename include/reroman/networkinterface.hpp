@@ -28,8 +28,7 @@ namespace reroman
 		 * @param ifname Nombre de la interfaz de red.
 		 * @throw std::system_error si el nombre de la interfaz no existe.
 		 */
-		explicit NetworkInterface( std::string ifname )
-			throw( std::system_error );
+		explicit NetworkInterface( std::string ifname );
 
 		/**
 		 * @brief Obtiene los datos de una interfaz de red en el sistema
@@ -37,8 +36,7 @@ namespace reroman
 		 * @param index Índice de la interfaz.
 		 * @throw std::system_error si el índice de la interfaz no existe.
 		 */
-		explicit NetworkInterface( int index )
-			throw( std::system_error );
+		explicit NetworkInterface( int index );
 
 
 		//===============================================================
@@ -62,8 +60,7 @@ namespace reroman
 		 * @throw std::system_error si no se puede obtener la dirección
 		 * requerida.
 		 */
-		IPv4Addr getAddress( void )
-			throw( std::system_error );
+		IPv4Addr getAddress( void );
 
 		/**
 		 * @brief Obtiene la máscara de subred asignada a la interfaz.
@@ -71,8 +68,7 @@ namespace reroman
 		 * @throw std::system_error si no se puede obtener la dirección
 		 * requerida.
 		 */
-		IPv4Addr getNetmask( void )
-			throw( std::system_error );
+		IPv4Addr getNetmask( void );
 
 		/**
 		 * @brief Obtiene la dirección física asignada a la interfaz.
@@ -80,8 +76,7 @@ namespace reroman
 		 * @throw std::system_error si no se puede obtener la dirección
 		 * requerida.
 		 */
-		HwAddr getHwAddress( void )
-			throw( std::system_error );
+		HwAddr getHwAddress( void );
 
 	private:
 		std::string name;
@@ -103,19 +98,16 @@ namespace reroman
 	}
 
 	inline IPv4Addr NetworkInterface::getAddress( void )
-		throw( std::system_error )
 	{
 		return IPv4Addr::getFromInterface( name );
 	}
 
 	inline IPv4Addr NetworkInterface::getNetmask( void )
-		throw( std::system_error )
 	{
 		return IPv4Addr::getNmaskFromInterface( name );
 	}
 
 	inline HwAddr NetworkInterface::getHwAddress( void )
-		throw( std::system_error )
 	{
 		return HwAddr::getFromInterface( name );
 	}

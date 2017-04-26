@@ -61,8 +61,7 @@ std::ostream& operator<<( std::ostream &out, const reroman::IPv4Addr &ip );
  * @details Funciona de la misma manera que
  * reroman::IPv4Addr::operator+(int n) const
  */
-reroman::IPv4Addr operator+( int n, const reroman::IPv4Addr &ip )
-	throw( std::overflow_error, std::underflow_error );
+reroman::IPv4Addr operator+( int n, const reroman::IPv4Addr &ip );
 
 
 namespace reroman
@@ -75,7 +74,7 @@ namespace reroman
 	{
 		friend std::ostream& ::operator<<( std::ostream &out, const IPv4Addr &ip );
 
-		public:
+	public:
 		//===============================================================
 		//							Constructores
 		//===============================================================
@@ -95,8 +94,7 @@ namespace reroman
 		 * IP.
 		 * @throw std::invalid_argument si la cadena no es una dirección IP válida.
 		 */
-		IPv4Addr( std::string addr )
-			throw( std::invalid_argument );
+		IPv4Addr( std::string addr );
 
 		/**
 		 * @brief Crea una dirección IP a partir de una estructura in_addr
@@ -168,8 +166,7 @@ namespace reroman
 		 * @param addr Cadena en notación de puntos y números.
 		 * @throw std::invalid_argument si la dirección no es válida.
 		 */
-		void setAddr( std::string addr )
-			throw( std::invalid_argument );
+		void setAddr( std::string addr );
 
 		/**
 		 * @brief Establece una nueva dirección IP a partir de un entero
@@ -230,8 +227,7 @@ namespace reroman
 		 * es menor que 0.0.0.0.
 		 * @see operator+( int n, const reroman::IPv4Addr &ip )
 		 */
-		IPv4Addr operator+( int n ) const
-			throw( std::overflow_error, std::underflow_error );
+		IPv4Addr operator+( int n ) const;
 
 		/**
 		 * @brief Resta un entero a una dirección IP.
@@ -241,8 +237,7 @@ namespace reroman
 		 * 255.255.255.255.
 		 * @throw std::underflow_error si el resultado es menor a la IP 0.0.0.0.
 		 */
-		IPv4Addr operator-( int n ) const
-			throw( std::overflow_error, std::underflow_error );
+		IPv4Addr operator-( int n ) const;
 
 		/**
 		 * @brief Preincrementa en uno la dirección IP.
@@ -250,8 +245,7 @@ namespace reroman
 		 * @throw std::overflow_error si el valor resultante es mayor que
 		 * 255.255.255.255. El objeto permanece sin cambios.
 		 */
-		IPv4Addr& operator++( void )
-			throw( std::overflow_error );
+		IPv4Addr& operator++( void );
 
 		/**
 		 * @brief Postincrementa en uno la dirección IP.
@@ -259,8 +253,7 @@ namespace reroman
 		 * @throw std::overflow_error si el valor resultante es mayor que
 		 * 255.255.255.255. El objeto permanece sin cambios.
 		 */
-		IPv4Addr operator++( int )
-			throw( std::overflow_error );
+		IPv4Addr operator++( int );
 
 		/**
 		 * @brief Predecrementa en uno la dirección IP.
@@ -268,8 +261,7 @@ namespace reroman
 		 * @throw std::underflow_error si el valor resultante es menor que
 		 * 0.0.0.0. El objeto permanece sin cambios.
 		 */
-		IPv4Addr& operator--( void )
-			throw( std::underflow_error );
+		IPv4Addr& operator--( void );
 
 		/**
 		 * @brief Postdecrementa en uno la dirección IP.
@@ -277,8 +269,7 @@ namespace reroman
 		 * @throw std::underflow_error si el valor resultante es menor que
 		 * 0.0.0.0. El objeto permanece sin cambios.
 		 */
-		IPv4Addr operator--( int )
-			throw( std::underflow_error );
+		IPv4Addr operator--( int );
 
 		/**
 		 * @brief Efectúa una operación NOT a nivel de bit.
@@ -319,8 +310,7 @@ namespace reroman
 		 * @return La dirección IPv4 de la interfaz de red especificada.
 		 * @throw std::system_error si ocurre algún error.
 		 */
-		static IPv4Addr getFromInterface( std::string ifname )
-			throw( std::system_error );
+		static IPv4Addr getFromInterface( std::string ifname );
 
 		/**
 		 * @brief Obtiene la máscara de subred de una interfaz de red.
@@ -328,8 +318,7 @@ namespace reroman
 		 * @return La máscara de red de la interfaz especificada.
 		 * @throw std::system_error si ocurre algún error.
 		 */
-		static IPv4Addr getNmaskFromInterface( std::string ifname )
-			throw( std::system_error );
+		static IPv4Addr getNmaskFromInterface( std::string ifname );
 
 		/**
 		 * @brief Obtiene la dirección IP de red.
@@ -353,7 +342,7 @@ namespace reroman
 		static IPv4Addr makeBroadcast( const IPv4Addr &host, const IPv4Addr &netmask )
 			noexcept;
 
-		private:
+	private:
 		struct in_addr data;
 	};
 
@@ -457,7 +446,6 @@ inline std::ostream& operator<<( std::ostream &out, const
 }
 
 inline reroman::IPv4Addr operator+( int n, const reroman::IPv4Addr &ip )
-	throw( std::overflow_error, std::underflow_error )
 {
 	return ip + n;
 }

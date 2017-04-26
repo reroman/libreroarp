@@ -14,7 +14,6 @@ using namespace reroman;
 
 
 NetworkInterface::NetworkInterface( string ifname )
-	throw( system_error )
 	: name( ifname ),
 	  index( 0 )
 {
@@ -37,7 +36,6 @@ NetworkInterface::NetworkInterface( string ifname )
 }
 
 NetworkInterface::NetworkInterface( int index )
-	throw( system_error )
 	: name( "" ),
 	index( index )
 {
