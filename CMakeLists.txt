@@ -1,9 +1,10 @@
 cmake_minimum_required( VERSION 3.5 )
 project( libreroarp CXX )
 set( CMAKE_CXX_STANDARD 11 )
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules")
+set( CMAKE_CXX_STANDARD_REQUIRED ON )
+set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
+	"${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" )
 
-#option( ENABLE_VENDORS "Habilita el uso de vendedores en direcciones MAC" ON )
 option( BUILD_EXAMPLES "Compila código de ejemplo" ON )
 
 include_directories( "${CMAKE_CURRENT_SOURCE_DIR}/include" )
