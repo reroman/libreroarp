@@ -52,7 +52,7 @@ namespace reroman{ class HwAddr; }
  * @brief Coloca una dirección física en un flujo de salida.
  * @details La dirección es insertada en flujo de salida, además
  * del vendedor entre paréntesis.
- * @param out Flujo de salida en el cual se insertará la física.
+ * @param out Flujo de salida en el cual se insertará la dirección física.
  * @param addr Dirección que se insertará en el flujo de salida.
  * @return Una referencia a out.
  */

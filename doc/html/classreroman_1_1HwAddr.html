@@ -162,10 +162,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a79d06f5c0025ddf4704a4048332f1719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copia los datos de una dirección física.  <a href="#a79d06f5c0025ddf4704a4048332f1719">Más...</a><br /></td></tr>
 <tr class="separator:a79d06f5c0025ddf4704a4048332f1719"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae789ff1a86aec6396692343e15d1c185"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1HwAddr.html#ae789ff1a86aec6396692343e15d1c185">operator==</a> (const <a class="el" href="classreroman_1_1HwAddr.html">HwAddr</a> &amp;addr) const noexcept</td></tr>
-<tr class="memdesc:ae789ff1a86aec6396692343e15d1c185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara dos direcciones física.  <a href="#ae789ff1a86aec6396692343e15d1c185">Más...</a><br /></td></tr>
+<tr class="memdesc:ae789ff1a86aec6396692343e15d1c185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara dos direcciones físicas.  <a href="#ae789ff1a86aec6396692343e15d1c185">Más...</a><br /></td></tr>
 <tr class="separator:ae789ff1a86aec6396692343e15d1c185"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8903449dd6629247c2586927a5c22a38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1HwAddr.html#a8903449dd6629247c2586927a5c22a38">operator!=</a> (const <a class="el" href="classreroman_1_1HwAddr.html">HwAddr</a> &amp;addr) const noexcept</td></tr>
-<tr class="memdesc:a8903449dd6629247c2586927a5c22a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si dos direcciones física son diferentes.  <a href="#a8903449dd6629247c2586927a5c22a38">Más...</a><br /></td></tr>
+<tr class="memdesc:a8903449dd6629247c2586927a5c22a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si dos direcciones físicas son diferentes.  <a href="#a8903449dd6629247c2586927a5c22a38">Más...</a><br /></td></tr>
 <tr class="separator:a8903449dd6629247c2586927a5c22a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -476,7 +476,7 @@ Amigas</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Obtiene el nombre del vendedor del dispositivo. </p>
-<p>La consulta se hace desde el archivo vendors.db. Si el archivo o la física no es encontrada la función devuelve "Unknown". Se debe haber compilado con la opción ENABLE_VENDORS. </p><dl class="section return"><dt>Devuelve</dt><dd>Una cadena con el nombre del vendedor. </dd></dl>
+<p>La consulta se hace desde el archivo vendors.db. Si el archivo o la dirección física no es encontrada la función devuelve "Unknown". Se debe haber compilado con la opción ENABLE_VENDORS. </p><dl class="section return"><dt>Devuelve</dt><dd>Una cadena con el nombre del vendedor. </dd></dl>
 
 </div>
 </div>
@@ -529,7 +529,7 @@ Amigas</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Verifica si dos direcciones física son diferentes. </p>
+<p>Verifica si dos direcciones físicas son diferentes. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">addr</td><td>Dirección con la cual se compara el objeto. </td></tr>
@@ -595,7 +595,7 @@ Amigas</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compara dos direcciones física. </p>
+<p>Compara dos direcciones físicas. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">addr</td><td>Dirección con la cual comparar el objeto. </td></tr>
@@ -639,7 +639,7 @@ Amigas</h2></td></tr>
 <p>Establece el valor de un byte en la dirección física. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>Índice a cambiar en la física. </td></tr>
+    <tr><td class="paramname">index</td><td>Índice a cambiar en la dirección. </td></tr>
     <tr><td class="paramname">value</td><td>Nuevo valor para el byte. </td></tr>
   </table>
   </dd>
@@ -712,7 +712,7 @@ Amigas</h2></td></tr>
 <p>Establece una dirección física a partir de una lista de valores para los bytes. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bytes</td><td>Lista de valores para los bytes de la nueva física. </td></tr>
+    <tr><td class="paramname">bytes</td><td>Lista de valores para los bytes de la nueva dirección física. </td></tr>
   </table>
   </dd>
 </dl>
@@ -844,7 +844,7 @@ Amigas</h2></td></tr>
 <p>Coloca una dirección física en un flujo de salida. </p>
 <p>La dirección es insertada en flujo de salida, además del vendedor entre paréntesis. </p><dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">out</td><td>Flujo de salida en el cual se insertará la física. </td></tr>
+    <tr><td class="paramname">out</td><td>Flujo de salida en el cual se insertará la dirección física. </td></tr>
     <tr><td class="paramname">addr</td><td>Dirección que se insertará en el flujo de salida. </td></tr>
   </table>
   </dd>
