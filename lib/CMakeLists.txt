@@ -1,5 +1,3 @@
-find_package( Sqlite3 )
-
 add_library( reroarp
 	ipv4addr.cpp
 	hwaddr.cpp

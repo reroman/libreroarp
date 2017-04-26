@@ -41,6 +41,7 @@
 #include <stdexcept>
 #include <system_error>
 #include <initializer_list>
+#include <array>
 
 #include <cstdint>
 
@@ -71,7 +72,7 @@ namespace reroman
 	{
 		friend std::ostream& ::operator<<( std::ostream &out, const HwAddr &addr );
 
-		public:
+	public:
 		//===============================================================
 		//							Constructores
 		//===============================================================
@@ -87,25 +88,23 @@ namespace reroman
 		 * @throw std::invalid_argument si la cadena no es una dirección física válida y en
 		 * el formato establecido.
 		 */
-		HwAddr( std::string addr  )
-			throw( std::invalid_argument );
+		HwAddr( std::string addr  );
 
 		/**
 		 * @brief Inicializa una dirección física a partir de una lista de valores.
 		 * @details Pasar como argumento { 1, 2, 3, 4, 5, 6 } generará la dirección
 		 * 01:02:03:04:05:06.
 		 * @param bytes Lista de bytes con los valores a inicializar.
-		 * @throw std::invalid_argument si la lista no contiene exactamente
-		 * HwAddrLen valores.
+		 * @throw std::invalid_argument si la lista de bytes no es de al menos
+		 * HwAddrLen elementos.
 		 */
-		HwAddr( std::initializer_list<uint8_t> bytes )
-			throw( std::invalid_argument );
+		HwAddr( std::initializer_list<uint8_t> bytes );
 
 		/**
 		 * @brief Inicializa una dirección física a partir de una estructura ether_addr.
 		 * @param addr Apuntador a la estructura que contiene los valores de la dirección.
 		 */
-		HwAddr( const struct ether_addr *addr ) noexcept;
+		HwAddr( const struct ether_addr *addr );
 
 		/**
 		 * @brief Inicializa una dirección física a partir de un arreglo estilo C.
@@ -152,8 +151,7 @@ namespace reroman
 		 * @throw std::out_of_range si index se encuentra fuera del rango
 		 * [0,HwAddrLen].
 		 */
-		uint8_t getByte( unsigned int index ) const
-			throw( std::out_of_range );
+		uint8_t getByte( unsigned int index ) const;
 
 		/**
 		 * @brief Obtiene el nombre del vendedor del dispositivo.
@@ -173,25 +171,23 @@ namespace reroman
 		 * @param addr Dirección en formato \b xx:xx:xx:xx:xx:xx.
 		 * @throw std::invalid_argument si la cadena no es una dirección válida.
 		 */
-		void setData( std::string addr )
-			throw( std::invalid_argument );
+		void setData( std::string addr );
 
 		/**
 		 * @brief Establece una dirección física a partir de una lista de valores
 		 * para los bytes.
 		 * @param bytes Lista de valores para los bytes de la nueva dirección física.
-		 * @throw std::invalid_argument si la lista de bytes no es exactamente
-		 * HwAddrLen.
+		 * @throw std::invalid_argument si la lista de bytes no es de al menos
+		 * HwAddrLen elementos.
 		 */
-		void setData( std::initializer_list<unsigned char> bytes )
-			throw( std::invalid_argument );
+		void setData( std::initializer_list<unsigned char> bytes );
 
 		/**
 		 * @brief Establece una nueva dirección física a partir de una estructura
 		 * ether_addr.
 		 * @param addr Apuntador a una estructura ether_addr.
 		 */
-		void setData( const struct ether_addr *addr ) noexcept;
+		void setData( const struct ether_addr *addr );
 
 		/**
 		 * @brief Establece una nueva dirección física a partir de un arreglo estilo
@@ -206,8 +202,7 @@ namespace reroman
 		 * @param value Nuevo valor para el byte.
 		 * @throw std::out_of_range si index es mayor a HwAddrLen.
 		 */
-		void setByte( unsigned int index, uint8_t value )
-			throw( std::out_of_range );
+		void setByte( unsigned int index, uint8_t value );
 
 		/**
 		 * @brief Establece todos los bytes de la dirección a 0.
@@ -254,11 +249,10 @@ namespace reroman
 		 * @return La dirección física de la interfaz de red especificada.
 		 * @throw std::system_error si existe algún error con la interfaz de red.
 		 */
-		static HwAddr getFromInterface( std::string ifname )
-			throw( std::system_error );
+		static HwAddr getFromInterface( std::string ifname );
 
-		private:
-		uint8_t data[HwAddrLen];
+	private:
+		std::array<uint8_t, HwAddrLen> data;
 	};
 
 
@@ -267,10 +261,15 @@ namespace reroman
 	//===============================================================
 	inline const uint8_t* HwAddr::getData() const noexcept
 	{
-		return data;
+		return data.data();
 	}
 
-	inline void HwAddr::setData( const struct ether_addr *addr ) noexcept
+	inline uint8_t HwAddr::getByte( unsigned int index ) const
+	{
+		return data.at( index );
+	}
+
+	inline void HwAddr::setData( const struct ether_addr *addr )
 	{
 		for( int i = 0 ; i < HwAddrLen ; i++ )
 			data[i] = addr->ether_addr_octet[i];
@@ -282,15 +281,24 @@ namespace reroman
 			data[i] = bytes[i];
 	}
 
+	inline void HwAddr::setByte( unsigned int index, uint8_t value )
+	{
+		data.at( index ) = value;
+	}
+
 	inline void HwAddr::clear() noexcept
 	{
-		for( auto &i : data )
-			i = 0;
+		data.fill( 0 );
+	}
+
+	inline bool HwAddr::operator ==( const HwAddr &addr ) const noexcept
+	{
+		return data == data;
 	}
 
 	inline bool HwAddr::operator !=( const HwAddr &addr ) const noexcept
 	{
-		return !( *this == addr );
+		return data != addr.data;
 	}
 } // namespace reroman
 

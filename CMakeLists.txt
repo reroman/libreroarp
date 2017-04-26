@@ -10,6 +10,7 @@ include_directories( "${CMAKE_CURRENT_SOURCE_DIR}/include" )
 
 set( MAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall -Wextra -O3" )
 find_package( Boost 1.58 REQUIRED )
+find_package( Sqlite3 )
 
 add_subdirectory( lib )
 

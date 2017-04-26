@@ -25,22 +25,20 @@ using namespace reroman;
 
 HwAddr::HwAddr( void ) noexcept
 {
-	for( int i = 0 ; i < HwAddrLen ; i++ )
-		data[i] = 0;
+	clear();
 }
 
-HwAddr::HwAddr( string addr ) throw( invalid_argument )
+HwAddr::HwAddr( string addr )
 {
 	setData( addr );
 }
 
 HwAddr::HwAddr( initializer_list<uint8_t> bytes )
-	throw( invalid_argument )
 {
 	setData( bytes );
 }
 
-HwAddr::HwAddr( const struct ether_addr *addr ) noexcept
+HwAddr::HwAddr( const struct ether_addr *addr )
 {
 	setData( addr );
 }
@@ -79,13 +77,6 @@ string HwAddr::toString( void ) const
 	return out.str();
 }
 
-uint8_t HwAddr::getByte( unsigned int index ) const
-	throw( out_of_range )
-{
-	if( index >= HwAddrLen )
-		throw out_of_range( "Invalid index" );
-	return data[index];
-}
 
 string HwAddr::getVendor( void ) const
 {
@@ -117,7 +108,7 @@ string HwAddr::getVendor( void ) const
 	return vendor;
 }
 
-void HwAddr::setData( string addr ) throw( invalid_argument )
+void HwAddr::setData( string addr )
 {
 	string::size_type noNum;
 	string errorMessage = addr + " is not a valid MAC address";
@@ -141,9 +132,8 @@ void HwAddr::setData( string addr ) throw( invalid_argument )
 }
 
 void HwAddr::setData( initializer_list<uint8_t> bytes )
-	throw( invalid_argument )
 {
-	if( bytes.size() != HwAddrLen )
+	if( bytes.size() < HwAddrLen )
 		throw invalid_argument( "The given list is not a valid MAC address" );
 
 	auto i = bytes.begin();
@@ -153,27 +143,7 @@ void HwAddr::setData( initializer_list<uint8_t> bytes )
 	}
 }
 
-void HwAddr::setByte( unsigned int index, uint8_t value )
-	throw( out_of_range )
-{
-	if( index >= HwAddrLen )
-		throw out_of_range( "Invalid index" );
-	data[index] = value;
-}
-
-bool HwAddr::operator ==( const HwAddr &addr ) const noexcept
-{
-	if( &addr == this )
-		return true;
-
-	for( int i = 0 ; i < HwAddrLen ; i++ )
-		if( data[i] != addr.data[i] )
-			return false;
-	return true;
-}
-
 HwAddr HwAddr::getFromInterface( string ifname )
-	throw( system_error )
 {
 	int sockfd;
 	struct ifreq nic;
