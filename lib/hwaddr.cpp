@@ -98,7 +98,7 @@ string HwAddr::getVendor( void ) const
 				SQLITE_OPEN_READONLY, NULL ) != SQLITE_OK )
 		return vendor;
 
-	sql << "SELECT vendor FROM MacVendors WHERE mac='"
+	sql << "SELECT vendor FROM Vendors WHERE mac='"
 		<< uppercase << hex;
 	for( int i = 0 ; i < HwAddrLen / 2 ; i++ ){
 		sql.fill( '0' );
