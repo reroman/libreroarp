@@ -158,7 +158,7 @@ namespace reroman
 		/**
 		 * @brief Obtiene el nombre del vendedor del dispositivo.
 		 * @details La consulta se hace desde el archivo vendors.db. Si
-		 * el archivo o la física no es encontrada la función devuelve
+		 * el archivo o la dirección física no es encontrada la función devuelve
 		 * "Unknown". Se debe haber compilado con la opción ENABLE_VENDORS.
 		 * @return Una cadena con el nombre del vendedor.
 		 */
@@ -179,7 +179,7 @@ namespace reroman
 		/**
 		 * @brief Establece una dirección física a partir de una lista de valores
 		 * para los bytes.
-		 * @param bytes Lista de valores para los bytes de la nueva física.
+		 * @param bytes Lista de valores para los bytes de la nueva dirección física.
 		 * @throw std::invalid_argument si la lista de bytes no es exactamente
 		 * HwAddrLen.
 		 */
@@ -202,7 +202,7 @@ namespace reroman
 
 		/**
 		 * @brief Establece el valor de un byte en la dirección física.
-		 * @param index Índice a cambiar en la física.
+		 * @param index Índice a cambiar en la dirección.
 		 * @param value Nuevo valor para el byte.
 		 * @throw std::out_of_range si index es mayor a HwAddrLen.
 		 */
@@ -226,7 +226,7 @@ namespace reroman
 		HwAddr& operator =( const HwAddr &addr ) noexcept = default;
 
 		/**
-		 * @brief Compara dos direcciones física.
+		 * @brief Compara dos direcciones físicas.
 		 * @param addr Dirección con la cual comparar el objeto.
 		 * @return Verdadero si todos los bytes coinciden entre los objetos;
 		 * falso en caso contrario.
@@ -234,7 +234,7 @@ namespace reroman
 		bool operator ==( const HwAddr &addr ) const noexcept;
 
 		/**
-		 * @brief Verifica si dos direcciones física son diferentes.
+		 * @brief Verifica si dos direcciones físicas son diferentes.
 		 * @param addr Dirección con la cual se compara el objeto.
 		 * @return Verdadero si las direcciones son diferentes; falso si
 		 * son iguales.
