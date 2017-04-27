@@ -304,7 +304,7 @@ namespace reroman
 
 	inline bool HwAddr::operator ==( const HwAddr &addr ) const noexcept
 	{
-		return data == data;
+		return data == addr.data;
 	}
 
 	inline bool HwAddr::operator !=( const HwAddr &addr ) const noexcept
