@@ -87,6 +87,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="classreroman_1_1arp_1_1ARPFrame-members.html">Lista de todos los miembros</a>  </div>
   <div class="headertitle">
 <div class="title">Referencia de la Clase reroman::arp::ARPFrame<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
@@ -96,9 +99,132 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
  <a href="classreroman_1_1arp_1_1ARPFrame.html#details">Más...</a></p>
 
 <p><code>#include &lt;<a class="el" href="arp_8hpp_source.html">reroman/arp/arp.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a8542169467421c946df6f457b6687334"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#a8542169467421c946df6f457b6687334">ARPFrame</a> (<a class="el" href="namespacereroman_1_1arp.html#ab5236afceb46c028c2ec9dea60488643">OperationCode</a> op=<a class="el" href="namespacereroman_1_1arp.html#ab5236afceb46c028c2ec9dea60488643aad6c35880c58d97c03d60a6ad0f23737">OperationCode::REQUEST</a>, <a class="el" href="namespacereroman_1_1arp.html#ae1174a82cdf1b93c24af31bb2afbf0cd">HwType</a> hw=<a class="el" href="namespacereroman_1_1arp.html#ae1174a82cdf1b93c24af31bb2afbf0cdabd9713c843d43901a663bdc87c514ac6">HwType::ETHER</a>)</td></tr>
+<tr class="memdesc:a8542169467421c946df6f457b6687334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea una trama vacía con algunos valores por defecto.  <a href="#a8542169467421c946df6f457b6687334">Más...</a><br /></td></tr>
+<tr class="separator:a8542169467421c946df6f457b6687334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab32bb358894d495780ba1fbd6d6685d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab32bb358894d495780ba1fbd6d6685d8"></a>
+<a class="el" href="namespacereroman_1_1arp.html#ae1174a82cdf1b93c24af31bb2afbf0cd">HwType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#ab32bb358894d495780ba1fbd6d6685d8">getHwType</a> (void) const noexcept</td></tr>
+<tr class="memdesc:ab32bb358894d495780ba1fbd6d6685d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el tipo de hardware de la trama. <br /></td></tr>
+<tr class="separator:ab32bb358894d495780ba1fbd6d6685d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab18513d01b82ae21163fa3710df6b663"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab18513d01b82ae21163fa3710df6b663"></a>
+<a class="el" href="namespacereroman_1_1arp.html#afa1e5edd763f3ed9f8780bfcb7687180">Protocol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#ab18513d01b82ae21163fa3710df6b663">getProtocol</a> (void) const noexcept</td></tr>
+<tr class="memdesc:ab18513d01b82ae21163fa3710df6b663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el tipo de protocolo. <br /></td></tr>
+<tr class="separator:ab18513d01b82ae21163fa3710df6b663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab132524195789891a9565afbfd87079f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab132524195789891a9565afbfd87079f"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#ab132524195789891a9565afbfd87079f">getHwLen</a> (void) const noexcept</td></tr>
+<tr class="memdesc:ab132524195789891a9565afbfd87079f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la longitud de la dirección de hardware. <br /></td></tr>
+<tr class="separator:ab132524195789891a9565afbfd87079f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a6a2058b359957b8f0164f17ed138f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a6a2058b359957b8f0164f17ed138f8"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#a7a6a2058b359957b8f0164f17ed138f8">getProtocolLen</a> (void) const noexcept</td></tr>
+<tr class="memdesc:a7a6a2058b359957b8f0164f17ed138f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la longitud de la dirección de protocolo. <br /></td></tr>
+<tr class="separator:a7a6a2058b359957b8f0164f17ed138f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a235736cd6e15ce3121b83659aba2913d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a235736cd6e15ce3121b83659aba2913d"></a>
+<a class="el" href="namespacereroman_1_1arp.html#ab5236afceb46c028c2ec9dea60488643">OperationCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#a235736cd6e15ce3121b83659aba2913d">getOpCode</a> (void) const noexcept</td></tr>
+<tr class="memdesc:a235736cd6e15ce3121b83659aba2913d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el código de operación. <br /></td></tr>
+<tr class="separator:a235736cd6e15ce3121b83659aba2913d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae5edeea511451e658e51dc6c643394"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abae5edeea511451e658e51dc6c643394"></a>
+<a class="el" href="classreroman_1_1HwAddr.html">reroman::HwAddr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#abae5edeea511451e658e51dc6c643394">getSourceHwAddr</a> (void) const noexcept</td></tr>
+<tr class="memdesc:abae5edeea511451e658e51dc6c643394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene una referencia a la dirección física de origen. <br /></td></tr>
+<tr class="separator:abae5edeea511451e658e51dc6c643394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a8703b78e99d1fd743dff8efc74b38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2a8703b78e99d1fd743dff8efc74b38"></a>
+<a class="el" href="classreroman_1_1IPv4Addr.html">reroman::IPv4Addr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#ab2a8703b78e99d1fd743dff8efc74b38">getSourceIPAddr</a> (void) const noexcept</td></tr>
+<tr class="memdesc:ab2a8703b78e99d1fd743dff8efc74b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene una referencia a la dirección IP de origen. <br /></td></tr>
+<tr class="separator:ab2a8703b78e99d1fd743dff8efc74b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7951ec19cfa25c3267005eea41aeb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec7951ec19cfa25c3267005eea41aeb9"></a>
+<a class="el" href="classreroman_1_1HwAddr.html">reroman::HwAddr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#aec7951ec19cfa25c3267005eea41aeb9">getTargetHwAddr</a> (void) const noexcept</td></tr>
+<tr class="memdesc:aec7951ec19cfa25c3267005eea41aeb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene una referencia a la dirección física destino. <br /></td></tr>
+<tr class="separator:aec7951ec19cfa25c3267005eea41aeb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af87072a157489cb5226c59d1f26a719e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af87072a157489cb5226c59d1f26a719e"></a>
+<a class="el" href="classreroman_1_1IPv4Addr.html">reroman::IPv4Addr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#af87072a157489cb5226c59d1f26a719e">getTargetIPAddr</a> (void) const noexcept</td></tr>
+<tr class="memdesc:af87072a157489cb5226c59d1f26a719e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene una referencia a la dirección IP destino. <br /></td></tr>
+<tr class="separator:af87072a157489cb5226c59d1f26a719e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a92302fce7ee1ecfd830f58c99f7e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8a92302fce7ee1ecfd830f58c99f7e6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#aa8a92302fce7ee1ecfd830f58c99f7e6">setHwType</a> (<a class="el" href="namespacereroman_1_1arp.html#ae1174a82cdf1b93c24af31bb2afbf0cd">HwType</a> hw) noexcept</td></tr>
+<tr class="memdesc:aa8a92302fce7ee1ecfd830f58c99f7e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece el tipo de hardware. <br /></td></tr>
+<tr class="separator:aa8a92302fce7ee1ecfd830f58c99f7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d4b09b9501f3c39c1ccca35dc2bde3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3d4b09b9501f3c39c1ccca35dc2bde3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#ad3d4b09b9501f3c39c1ccca35dc2bde3">setProtocol</a> (<a class="el" href="namespacereroman_1_1arp.html#afa1e5edd763f3ed9f8780bfcb7687180">Protocol</a> p) noexcept</td></tr>
+<tr class="memdesc:ad3d4b09b9501f3c39c1ccca35dc2bde3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece el formato de protocolo. <br /></td></tr>
+<tr class="separator:ad3d4b09b9501f3c39c1ccca35dc2bde3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ca29dc12e985a9c54387dec64a5a4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0ca29dc12e985a9c54387dec64a5a4f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#ad0ca29dc12e985a9c54387dec64a5a4f">setHwLen</a> (uint8_t len) noexcept</td></tr>
+<tr class="memdesc:ad0ca29dc12e985a9c54387dec64a5a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la longitud de la dirección física. <br /></td></tr>
+<tr class="separator:ad0ca29dc12e985a9c54387dec64a5a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58aa80ee770b83391a6779ec22c16583"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58aa80ee770b83391a6779ec22c16583"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#a58aa80ee770b83391a6779ec22c16583">setProtocolLen</a> (uint8_t len) noexcept</td></tr>
+<tr class="memdesc:a58aa80ee770b83391a6779ec22c16583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la longitud de la dirección de protocolo. <br /></td></tr>
+<tr class="separator:a58aa80ee770b83391a6779ec22c16583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fe537c97bc98f4ab9d6b95a6f473fc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fe537c97bc98f4ab9d6b95a6f473fc5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#a1fe537c97bc98f4ab9d6b95a6f473fc5">setOpCode</a> (<a class="el" href="namespacereroman_1_1arp.html#ab5236afceb46c028c2ec9dea60488643">OperationCode</a> op) noexcept</td></tr>
+<tr class="memdesc:a1fe537c97bc98f4ab9d6b95a6f473fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece el código de operación. <br /></td></tr>
+<tr class="separator:a1fe537c97bc98f4ab9d6b95a6f473fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a5cb932105a2c0cad0a241ef9cf3de2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a5cb932105a2c0cad0a241ef9cf3de2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#a4a5cb932105a2c0cad0a241ef9cf3de2">setSourceHwAddr</a> (const <a class="el" href="classreroman_1_1HwAddr.html">reroman::HwAddr</a> &amp;addr)</td></tr>
+<tr class="memdesc:a4a5cb932105a2c0cad0a241ef9cf3de2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la dirección física de origen. <br /></td></tr>
+<tr class="separator:a4a5cb932105a2c0cad0a241ef9cf3de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a072642ceb1a7e456fe02908eb97cefbf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a072642ceb1a7e456fe02908eb97cefbf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#a072642ceb1a7e456fe02908eb97cefbf">setSourceIPAddr</a> (const <a class="el" href="classreroman_1_1IPv4Addr.html">reroman::IPv4Addr</a> &amp;addr) noexcept</td></tr>
+<tr class="memdesc:a072642ceb1a7e456fe02908eb97cefbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la dirección de protocolo de origen. <br /></td></tr>
+<tr class="separator:a072642ceb1a7e456fe02908eb97cefbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf00c4f6113c1f641be79f7aa2c620c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf00c4f6113c1f641be79f7aa2c620c9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#aaf00c4f6113c1f641be79f7aa2c620c9">setTargetHwAddr</a> (const <a class="el" href="classreroman_1_1HwAddr.html">reroman::HwAddr</a> &amp;addr)</td></tr>
+<tr class="memdesc:aaf00c4f6113c1f641be79f7aa2c620c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la dirección física destino. <br /></td></tr>
+<tr class="separator:aaf00c4f6113c1f641be79f7aa2c620c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6099c1e1961c3752107fc4ce9d0c15ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6099c1e1961c3752107fc4ce9d0c15ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html#a6099c1e1961c3752107fc4ce9d0c15ae">setTargetIPAddr</a> (const <a class="el" href="classreroman_1_1IPv4Addr.html">reroman::IPv4Addr</a> &amp;addr) noexcept</td></tr>
+<tr class="memdesc:a6099c1e1961c3752107fc4ce9d0c15ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la dirección de protocolo de origen. <br /></td></tr>
+<tr class="separator:a6099c1e1961c3752107fc4ce9d0c15ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Define una trama ARP. </p>
-</div><hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="a8542169467421c946df6f457b6687334"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">reroman::arp::ARPFrame::ARPFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacereroman_1_1arp.html#ab5236afceb46c028c2ec9dea60488643">OperationCode</a>&#160;</td>
+          <td class="paramname"><em>op</em> = <code><a class="el" href="namespacereroman_1_1arp.html#ab5236afceb46c028c2ec9dea60488643aad6c35880c58d97c03d60a6ad0f23737">OperationCode::REQUEST</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacereroman_1_1arp.html#ae1174a82cdf1b93c24af31bb2afbf0cd">HwType</a>&#160;</td>
+          <td class="paramname"><em>hw</em> = <code><a class="el" href="namespacereroman_1_1arp.html#ae1174a82cdf1b93c24af31bb2afbf0cdabd9713c843d43901a663bdc87c514ac6">HwType::ETHER</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Crea una trama vacía con algunos valores por defecto. </p>
+<p>La nueva trama es una petición por defecto para redes ethernet e IPv4, con direcciones de origen y destino nulas. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">op</td><td>Código de operación de la trama. Por defecto es una petición. </td></tr>
+    <tr><td class="paramname">hw</td><td>Tipo de hardware de la trama. Por defecto Ethernet 10/100 Mbps. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
 <li>include/reroman/arp/<a class="el" href="arp_8hpp_source.html">arp.hpp</a></li>
 </ul>
 </div><!-- contents -->

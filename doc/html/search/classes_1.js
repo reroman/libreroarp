@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ipv4addr',['IPv4Addr',['../classreroman_1_1IPv4Addr.html',1,'reroman']]]
+  ['hwaddr',['HwAddr',['../classreroman_1_1HwAddr.html',1,'reroman']]]
 ];

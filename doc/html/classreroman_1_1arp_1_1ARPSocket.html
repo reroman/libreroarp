@@ -102,14 +102,310 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
-<tr class="memitem:a4f5d8b87d73c8da5ce1059c19e2d0f65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f5d8b87d73c8da5ce1059c19e2d0f65"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPSocket.html#a4f5d8b87d73c8da5ce1059c19e2d0f65">ARPSocket</a> (<a class="el" href="namespacereroman_1_1arp.html#afa1e5edd763f3ed9f8780bfcb7687180">Protocol</a> p=<a class="el" href="namespacereroman_1_1arp.html#afa1e5edd763f3ed9f8780bfcb7687180a604e3f77195bbb36a7f1d2b7191885ae">Protocol::IPv4_PROTO</a>)</td></tr>
-<tr class="memdesc:a4f5d8b87d73c8da5ce1059c19e2d0f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abre un nuevo socket. <br /></td></tr>
-<tr class="separator:a4f5d8b87d73c8da5ce1059c19e2d0f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd0c6f6f7266d7e35c46ace73f465f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPSocket.html#a4dd0c6f6f7266d7e35c46ace73f465f3">ARPSocket</a> (unsigned int msecs=100)</td></tr>
+<tr class="memdesc:a4dd0c6f6f7266d7e35c46ace73f465f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abre un nuevo socket filtrando tramas ARP.  <a href="#a4dd0c6f6f7266d7e35c46ace73f465f3">Más...</a><br /></td></tr>
+<tr class="separator:a4dd0c6f6f7266d7e35c46ace73f465f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4216b2edec422a028a38ff24b74466d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPSocket.html#ae4216b2edec422a028a38ff24b74466d">getTimeout</a> (void) const noexcept</td></tr>
+<tr class="memdesc:ae4216b2edec422a028a38ff24b74466d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el tiempo máximo de espera para recibir una trama.  <a href="#ae4216b2edec422a028a38ff24b74466d">Más...</a><br /></td></tr>
+<tr class="separator:ae4216b2edec422a028a38ff24b74466d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3630f62222268f0e2971379c514201"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPSocket.html#a7a3630f62222268f0e2971379c514201">setTimeout</a> (unsigned int msecs)</td></tr>
+<tr class="memdesc:a7a3630f62222268f0e2971379c514201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece el tiempo máximo de espera para recibir una trama.  <a href="#a7a3630f62222268f0e2971379c514201">Más...</a><br /></td></tr>
+<tr class="separator:a7a3630f62222268f0e2971379c514201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69c85b53d55c241e0644a5033003307f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classreroman_1_1arp_1_1ARPSocket.html">ARPSocket</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPSocket.html#a69c85b53d55c241e0644a5033003307f">operator=</a> (<a class="el" href="classreroman_1_1arp_1_1ARPSocket.html">ARPSocket</a> &amp;&amp;sock)</td></tr>
+<tr class="memdesc:a69c85b53d55c241e0644a5033003307f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mueve los datos de un objeto <a class="el" href="classreroman_1_1arp_1_1ARPSocket.html" title="Representa un socket para enviar/recibir tramas ARP. ">ARPSocket</a> a otro.  <a href="#a69c85b53d55c241e0644a5033003307f">Más...</a><br /></td></tr>
+<tr class="separator:a69c85b53d55c241e0644a5033003307f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb3bbde09c187b05ce099df35526a15"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPSocket.html#a1eb3bbde09c187b05ce099df35526a15">receive</a> (<a class="el" href="classreroman_1_1arp_1_1ARPFrame.html">ARPFrame</a> &amp;frame, <a class="el" href="classreroman_1_1HwAddr.html">reroman::HwAddr</a> *sender=nullptr)</td></tr>
+<tr class="memdesc:a1eb3bbde09c187b05ce099df35526a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recibe una trama ARP.  <a href="#a1eb3bbde09c187b05ce099df35526a15">Más...</a><br /></td></tr>
+<tr class="separator:a1eb3bbde09c187b05ce099df35526a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47cec76562e3e81a14850739e9b14539"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPSocket.html#a47cec76562e3e81a14850739e9b14539">send</a> (const <a class="el" href="classreroman_1_1arp_1_1ARPFrame.html">ARPFrame</a> &amp;frame, const <a class="el" href="classreroman_1_1HwAddr.html">reroman::HwAddr</a> &amp;dest, const <a class="el" href="classreroman_1_1NetworkInterface.html">reroman::NetworkInterface</a> &amp;nic)</td></tr>
+<tr class="memdesc:a47cec76562e3e81a14850739e9b14539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia una trama ARP.  <a href="#a47cec76562e3e81a14850739e9b14539">Más...</a><br /></td></tr>
+<tr class="separator:a47cec76562e3e81a14850739e9b14539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede131562a20dec9f72f6f9e2bb63764"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPSocket.html#aede131562a20dec9f72f6f9e2bb63764">bind</a> (const <a class="el" href="classreroman_1_1NetworkInterface.html">reroman::NetworkInterface</a> &amp;nic)</td></tr>
+<tr class="memdesc:aede131562a20dec9f72f6f9e2bb63764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enlaza el socket a una interfaz de red (sólo para recibir).  <a href="#aede131562a20dec9f72f6f9e2bb63764">Más...</a><br /></td></tr>
+<tr class="separator:aede131562a20dec9f72f6f9e2bb63764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b4d560acecbe131e7d49773aa784775"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1arp_1_1ARPSocket.html#a0b4d560acecbe131e7d49773aa784775">resolve</a> (const <a class="el" href="classreroman_1_1IPv4Addr.html">reroman::IPv4Addr</a> &amp;ip, const <a class="el" href="classreroman_1_1NetworkInterface.html">reroman::NetworkInterface</a> &amp;nic, <a class="el" href="classreroman_1_1HwAddr.html">reroman::HwAddr</a> *result=nullptr)</td></tr>
+<tr class="memdesc:a0b4d560acecbe131e7d49773aa784775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resuelve una dirección IP utilizando el protocolo.  <a href="#a0b4d560acecbe131e7d49773aa784775">Más...</a><br /></td></tr>
+<tr class="separator:a0b4d560acecbe131e7d49773aa784775"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Representa un socket para enviar/recibir tramas ARP. </p>
-</div><hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="a4dd0c6f6f7266d7e35c46ace73f465f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">reroman::arp::ARPSocket::ARPSocket </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>msecs</em> = <code>100</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abre un nuevo socket filtrando tramas ARP. </p>
+<p>Sólo procesos con id de usuario efectivo 0 o capacidad CAP_NET_RAW pueden crear este tipo de sockets. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msecs</td><td>Tiempo máximo en ms para esperar por una respuesta. Si es establecido a 0 entonces se esperará hasta que haya una respuesta. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::system_error</td><td>si no puede abrirse el socket. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="aede131562a20dec9f72f6f9e2bb63764"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool reroman::arp::ARPSocket::bind </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classreroman_1_1NetworkInterface.html">reroman::NetworkInterface</a> &amp;&#160;</td>
+          <td class="paramname"><em>nic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enlaza el socket a una interfaz de red (sólo para recibir). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nic</td><td>Interfaz a la cual se desea enlazar el socket. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Verdadero si se enlazó con éxito, falso en caso contrario estableciendo el valor de errno. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae4216b2edec422a028a38ff24b74466d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int reroman::arp::ARPSocket::getTimeout </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtiene el tiempo máximo de espera para recibir una trama. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Un entero que indica el tiempo en milisegundos. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a69c85b53d55c241e0644a5033003307f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classreroman_1_1arp_1_1ARPSocket.html">ARPSocket</a>&amp; reroman::arp::ARPSocket::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classreroman_1_1arp_1_1ARPSocket.html">ARPSocket</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>sock</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mueve los datos de un objeto <a class="el" href="classreroman_1_1arp_1_1ARPSocket.html" title="Representa un socket para enviar/recibir tramas ARP. ">ARPSocket</a> a otro. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sock</td><td>Objeto a mover. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>una referencia este objeto. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1eb3bbde09c187b05ce099df35526a15"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool reroman::arp::ARPSocket::receive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classreroman_1_1arp_1_1ARPFrame.html">ARPFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classreroman_1_1HwAddr.html">reroman::HwAddr</a> *&#160;</td>
+          <td class="paramname"><em>sender</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recibe una trama ARP. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">frame</td><td>Trama en la cual se almacenará el resultado. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">sender</td><td>Si no es null, almacena la dirección del remitente. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Verdadero si se leyó el frame, falso si terminó el tiempo de espera antes de leer algo. </dd></dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::system_error</td><td>si ocurriera algún error. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0b4d560acecbe131e7d49773aa784775"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool reroman::arp::ARPSocket::resolve </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classreroman_1_1IPv4Addr.html">reroman::IPv4Addr</a> &amp;&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classreroman_1_1NetworkInterface.html">reroman::NetworkInterface</a> &amp;&#160;</td>
+          <td class="paramname"><em>nic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classreroman_1_1HwAddr.html">reroman::HwAddr</a> *&#160;</td>
+          <td class="paramname"><em>result</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resuelve una dirección IP utilizando el protocolo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">ip</td><td>Dirección IP que se desea resolver. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">nic</td><td>Interfaz de red a utilizar. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>Si no es null, almacena la dirección física asociada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Verdadero si la resolución pudo hacerse, falso en caso contrario. </dd></dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">system_error</td><td>si ocurre algún error. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a47cec76562e3e81a14850739e9b14539"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool reroman::arp::ARPSocket::send </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classreroman_1_1arp_1_1ARPFrame.html">ARPFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classreroman_1_1HwAddr.html">reroman::HwAddr</a> &amp;&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classreroman_1_1NetworkInterface.html">reroman::NetworkInterface</a> &amp;&#160;</td>
+          <td class="paramname"><em>nic</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envia una trama ARP. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>La trama que se desea enviar. </td></tr>
+    <tr><td class="paramname">dest</td><td>Dirección a la cual enviar la trama. </td></tr>
+    <tr><td class="paramname">nic</td><td>Interfaz de red por la cual enviar la trama. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Verdadero si la trama se envió correctamente, falso si ocurrió algún error cambiando el valor de errno. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7a3630f62222268f0e2971379c514201"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool reroman::arp::ARPSocket::setTimeout </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>msecs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Establece el tiempo máximo de espera para recibir una trama. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msecs</td><td>El tiempo en milisegundos a establecer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Verdadero si la acción se completó con éxito, falso en caso de error. En caso de error el valor actual se conserva. </dd></dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
 <li>include/reroman/arp/<a class="el" href="arp_8hpp_source.html">arp.hpp</a></li>
 </ul>
 </div><!-- contents -->

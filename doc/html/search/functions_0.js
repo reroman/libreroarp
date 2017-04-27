@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['clear',['clear',['../classreroman_1_1HwAddr.html#ace4bffd9a30c0dc5ae3b61add24cda9e',1,'reroman::HwAddr::clear()'],['../classreroman_1_1IPv4Addr.html#a662c69364865396df911daf71f83f07f',1,'reroman::IPv4Addr::clear()']]]
+  ['arpframe',['ARPFrame',['../classreroman_1_1arp_1_1ARPFrame.html#a8542169467421c946df6f457b6687334',1,'reroman::arp::ARPFrame']]],
+  ['arpsocket',['ARPSocket',['../classreroman_1_1arp_1_1ARPSocket.html#a4dd0c6f6f7266d7e35c46ace73f465f3',1,'reroman::arp::ARPSocket']]]
 ];

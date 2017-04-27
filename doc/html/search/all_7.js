@@ -1,16 +1,14 @@
 var searchData=
 [
-  ['operator_21_3d',['operator!=',['../classreroman_1_1HwAddr.html#a8903449dd6629247c2586927a5c22a38',1,'reroman::HwAddr::operator!=()'],['../classreroman_1_1IPv4Addr.html#a6355b3fe504a93401be319a55a0a28af',1,'reroman::IPv4Addr::operator!=()']]],
-  ['operator_26',['operator&amp;',['../classreroman_1_1IPv4Addr.html#aa63c76c0126539ef7e9a857ca35691fc',1,'reroman::IPv4Addr']]],
-  ['operator_2b',['operator+',['../classreroman_1_1IPv4Addr.html#a51d4ad98d037fb6b2e45c46fc2e2f6bf',1,'reroman::IPv4Addr::operator+()'],['../ipv4addr_8hpp.html#abbe6a910ef702dbb163a77a0c735a10e',1,'operator+():&#160;ipv4addr.hpp']]],
-  ['operator_2b_2b',['operator++',['../classreroman_1_1IPv4Addr.html#a3c998e25fd920b52268c3b729d37cf25',1,'reroman::IPv4Addr::operator++(void)'],['../classreroman_1_1IPv4Addr.html#abdc783a1e841044234bca69c9a57fd0d',1,'reroman::IPv4Addr::operator++(int)']]],
-  ['operator_2d',['operator-',['../classreroman_1_1IPv4Addr.html#a57b448573b4ec1be6aab1caf7a022e40',1,'reroman::IPv4Addr']]],
-  ['operator_2d_2d',['operator--',['../classreroman_1_1IPv4Addr.html#a0251a145a127cf209d08cba0955068f0',1,'reroman::IPv4Addr::operator--(void)'],['../classreroman_1_1IPv4Addr.html#ad2997612aece65fe93faabff2edeb2c8',1,'reroman::IPv4Addr::operator--(int)']]],
-  ['operator_3c',['operator&lt;',['../classreroman_1_1IPv4Addr.html#a0daf4232169d29dbdace414b3b7796c7',1,'reroman::IPv4Addr']]],
-  ['operator_3c_3c',['operator&lt;&lt;',['../classreroman_1_1HwAddr.html#a0014c599a309e4a88f361e4b2e2dc37c',1,'reroman::HwAddr::operator&lt;&lt;()'],['../classreroman_1_1IPv4Addr.html#ad5e6982ce691d87ac66873cfa1059536',1,'reroman::IPv4Addr::operator&lt;&lt;()'],['../hwaddr_8hpp.html#a7cf4b86de0a6571e5b5db1417aaa7d16',1,'operator&lt;&lt;(std::ostream &amp;out, const reroman::HwAddr &amp;addr):&#160;hwaddr.hpp'],['../ipv4addr_8hpp.html#a54295f4cf1e4ee693bafcce265f8c8b0',1,'operator&lt;&lt;(std::ostream &amp;out, const reroman::IPv4Addr &amp;ip):&#160;ipv4addr.hpp']]],
-  ['operator_3d',['operator=',['../classreroman_1_1HwAddr.html#a79d06f5c0025ddf4704a4048332f1719',1,'reroman::HwAddr::operator=()'],['../classreroman_1_1IPv4Addr.html#a21cff0019705f7c53eccb0be4b9adfd0',1,'reroman::IPv4Addr::operator=()']]],
-  ['operator_3d_3d',['operator==',['../classreroman_1_1HwAddr.html#ae789ff1a86aec6396692343e15d1c185',1,'reroman::HwAddr::operator==()'],['../classreroman_1_1IPv4Addr.html#a28f535e9c81339d9348d49dcb5796704',1,'reroman::IPv4Addr::operator==()']]],
-  ['operator_5e',['operator^',['../classreroman_1_1IPv4Addr.html#a7c4cecfa338ec49c374142c3405d78fe',1,'reroman::IPv4Addr']]],
-  ['operator_7c',['operator|',['../classreroman_1_1IPv4Addr.html#aa5a0214692c44499a9a5b305a0c90960',1,'reroman::IPv4Addr']]],
-  ['operator_7e',['operator~',['../classreroman_1_1IPv4Addr.html#afe3c72a2bc897b14285e7e876bea30f8',1,'reroman::IPv4Addr']]]
+  ['ieee1394',['IEEE1394',['../namespacereroman_1_1arp.html#ae1174a82cdf1b93c24af31bb2afbf0cdab1a0b5a12b8f7124f464f043129384b7',1,'reroman::arp']]],
+  ['ieee802',['IEEE802',['../namespacereroman_1_1arp.html#ae1174a82cdf1b93c24af31bb2afbf0cda93c625ca24668262212d718ba386a27c',1,'reroman::arp']]],
+  ['infiniband',['INFINIBAND',['../namespacereroman_1_1arp.html#ae1174a82cdf1b93c24af31bb2afbf0cdadbb4bbd0a1b7e5484e9faa68bc064bc3',1,'reroman::arp']]],
+  ['ipv4',['IPV4',['../namespacereroman_1_1arp.html#afa1e5edd763f3ed9f8780bfcb7687180ae638ca944d27f97f46a5986a5aa53434',1,'reroman::arp']]],
+  ['ipv4addr',['IPv4Addr',['../classreroman_1_1IPv4Addr.html',1,'reroman']]],
+  ['ipv4addr',['IPv4Addr',['../classreroman_1_1IPv4Addr.html#a2d3be57904a11641118183f785cf9872',1,'reroman::IPv4Addr::IPv4Addr(uint32_t addr=0) noexcept'],['../classreroman_1_1IPv4Addr.html#a6590e23f8ad2e08571604b231556a8e8',1,'reroman::IPv4Addr::IPv4Addr(std::string addr)'],['../classreroman_1_1IPv4Addr.html#a35380f221dc6f98e41b6b13c6421d1df',1,'reroman::IPv4Addr::IPv4Addr(struct in_addr addr) noexcept'],['../classreroman_1_1IPv4Addr.html#ac591e3b1e66140b9e92ffdaa6ca2ce55',1,'reroman::IPv4Addr::IPv4Addr(const IPv4Addr &amp;addr) noexcept']]],
+  ['ipv4addr_2ehpp',['ipv4addr.hpp',['../ipv4addr_8hpp.html',1,'']]],
+  ['ipv4addrlen',['IPv4AddrLen',['../classreroman_1_1IPv4Addr.html#ac289e17ce6ba4f98bcd4ea4025d4c3b5',1,'reroman::IPv4Addr']]],
+  ['isnull',['isNull',['../classreroman_1_1HwAddr.html#aa1741c381ed52c444c4d28ce0897ef65',1,'reroman::HwAddr::isNull()'],['../classreroman_1_1IPv4Addr.html#ada305da2df39bed93ed12f2e3c2002c4',1,'reroman::IPv4Addr::isNull()']]],
+  ['ispromiscmodeenabled',['isPromiscModeEnabled',['../classreroman_1_1NetworkInterface.html#ab2bff318a122abae1e92e6adb7fae220',1,'reroman::NetworkInterface']]],
+  ['isvalidnetmask',['isValidNetmask',['../classreroman_1_1IPv4Addr.html#a45bc48af6f70ac116047e8796420b086',1,'reroman::IPv4Addr']]]
 ];

@@ -139,6 +139,9 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:a6e8d98580a50dde01b73b437fa142cde"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1HwAddr.html#a6e8d98580a50dde01b73b437fa142cde">getVendor</a> (void) const </td></tr>
 <tr class="memdesc:a6e8d98580a50dde01b73b437fa142cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el nombre del vendedor del dispositivo.  <a href="#a6e8d98580a50dde01b73b437fa142cde">Más...</a><br /></td></tr>
 <tr class="separator:a6e8d98580a50dde01b73b437fa142cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b97877a21953b455cd1648ff25f3417"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1HwAddr.html#a7b97877a21953b455cd1648ff25f3417">copyTo</a> (uint8_t *bytes) const </td></tr>
+<tr class="memdesc:a7b97877a21953b455cd1648ff25f3417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copia los valores de la dirección física a un arreglo de bytes.  <a href="#a7b97877a21953b455cd1648ff25f3417">Más...</a><br /></td></tr>
+<tr class="separator:a7b97877a21953b455cd1648ff25f3417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c34341600181f74eef019c324f14948"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1HwAddr.html#a8c34341600181f74eef019c324f14948">setData</a> (std::string addr)</td></tr>
 <tr class="memdesc:a8c34341600181f74eef019c324f14948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece una nueva dirección a partir de una cadena.  <a href="#a8c34341600181f74eef019c324f14948">Más...</a><br /></td></tr>
 <tr class="separator:a8c34341600181f74eef019c324f14948"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -331,6 +334,38 @@ Amigas</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="a7b97877a21953b455cd1648ff25f3417"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reroman::HwAddr::copyTo </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>bytes</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copia los valores de la dirección física a un arreglo de bytes. </p>
+<p>La función debe tener por lo menos HwAddrLen bytes disponibles. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">bytes</td><td>Arreglo en el cual se copiarán los datos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a150a5af7c7d17049384a5799b704d560"></a>
 <div class="memitem">
 <div class="memproto">

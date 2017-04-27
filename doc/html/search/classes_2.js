@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['networkinterface',['NetworkInterface',['../classreroman_1_1NetworkInterface.html',1,'reroman']]]
+  ['ipv4addr',['IPv4Addr',['../classreroman_1_1IPv4Addr.html',1,'reroman']]]
 ];

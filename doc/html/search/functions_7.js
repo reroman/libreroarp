@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['setaddr',['setAddr',['../classreroman_1_1IPv4Addr.html#a9d38fd68ff377aaf995174baee5633a4',1,'reroman::IPv4Addr::setAddr(std::string addr)'],['../classreroman_1_1IPv4Addr.html#a5055861fdd3b8c0761057161d6d04da0',1,'reroman::IPv4Addr::setAddr(uint32_t addr) noexcept'],['../classreroman_1_1IPv4Addr.html#ae8189ef46d869ca74455d663b20793b9',1,'reroman::IPv4Addr::setAddr(struct in_addr addr) noexcept']]],
-  ['setbyte',['setByte',['../classreroman_1_1HwAddr.html#a529c5cfb771f068346ec9f096ca2235f',1,'reroman::HwAddr']]],
-  ['setdata',['setData',['../classreroman_1_1HwAddr.html#a8c34341600181f74eef019c324f14948',1,'reroman::HwAddr::setData(std::string addr)'],['../classreroman_1_1HwAddr.html#afc74e571e455c6698536f5f2c9ce93d5',1,'reroman::HwAddr::setData(std::initializer_list&lt; unsigned char &gt; bytes)'],['../classreroman_1_1HwAddr.html#a858b79b7e7953b0fbd511366d56ced82',1,'reroman::HwAddr::setData(const struct ether_addr *addr)'],['../classreroman_1_1HwAddr.html#ad6ad88d8478d116b5be11fce3b94d716',1,'reroman::HwAddr::setData(const uint8_t *bytes)']]]
+  ['networkinterface',['NetworkInterface',['../classreroman_1_1NetworkInterface.html#ad79e55b86f72faa0f8fa34111f84a810',1,'reroman::NetworkInterface::NetworkInterface(std::string ifname)'],['../classreroman_1_1NetworkInterface.html#aa8e6e4af32a63325bbec0b0818fc5d08',1,'reroman::NetworkInterface::NetworkInterface(int index)']]]
 ];
