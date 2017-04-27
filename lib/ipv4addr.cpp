@@ -1,4 +1,6 @@
 #include <reroman/ipv4addr.hpp>
+#include <stdexcept>
+#include <system_error>
 
 #include <cerrno>
 #include <cstring>

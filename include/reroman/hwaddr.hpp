@@ -38,8 +38,6 @@
 
 #include <iostream>
 #include <string>
-#include <stdexcept>
-#include <system_error>
 #include <initializer_list>
 #include <array>
 
@@ -162,6 +160,13 @@ namespace reroman
 		 */
 		std::string getVendor( void ) const;
 
+		/**
+		 * @brief Copia los valores de la dirección física a un arreglo de bytes.
+		 * @details La función debe tener por lo menos HwAddrLen bytes disponibles.
+		 * @param[out] bytes Arreglo en el cual se copiarán los datos.
+		 */
+		void copyTo( uint8_t *bytes ) const;
+
 
 		//===============================================================
 		//							Setters
@@ -267,6 +272,12 @@ namespace reroman
 	inline uint8_t HwAddr::getByte( unsigned int index ) const
 	{
 		return data.at( index );
+	}
+
+	inline void HwAddr::copyTo( uint8_t *bytes ) const
+	{
+		for( int i = 0 ; i < HwAddrLen ; i++ )
+			bytes[i] = data[i];
 	}
 
 	inline void HwAddr::setData( const struct ether_addr *addr )

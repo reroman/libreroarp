@@ -1,6 +1,8 @@
 #include <reroman/hwaddr.hpp>
 #include <sstream>
 #include <vector>
+#include <stdexcept>
+#include <system_error>
 #include <boost/algorithm/string/split.hpp>
 
 #include <cstring>

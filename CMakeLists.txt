@@ -5,7 +5,7 @@ set( CMAKE_CXX_STANDARD_REQUIRED ON )
 set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
 	"${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" )
 
-option( BUILD_EXAMPLES "Compila código de ejemplo" ON )
+option( BUILD_EXAMPLES "Compila códigos de ejemplo" ON )
 
 include_directories( "${CMAKE_CURRENT_SOURCE_DIR}/include" )
 
