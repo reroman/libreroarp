@@ -54,3 +54,48 @@ NetworkInterface::NetworkInterface( int index )
 	name = nic.ifr_name;
 }
 
+bool NetworkInterface::isPromiscModeEnabled( void ) const
+{
+	struct ifreq nic;
+	int sfd = socket( AF_INET, SOCK_DGRAM, 0 );
+
+	if( sfd < 0 )
+		throw system_error( errno, generic_category(), "socket" );
+
+	strcpy( nic.ifr_name, name.c_str() );
+	if( ioctl( sfd, SIOCGIFFLAGS, &nic ) < 0 ){
+		close( sfd );
+		throw system_error( errno, generic_category(), name );
+	}
+
+	close( sfd );
+	return nic.ifr_flags & IFF_PROMISC;
+}
+
+bool NetworkInterface::setPromiscMode( bool value )
+{
+	struct ifreq nic;
+	int sfd = socket( AF_INET, SOCK_DGRAM, 0 );
+
+	if( sfd < 0 )
+		return false;
+
+	strcpy( nic.ifr_name, name.c_str() );
+	if( ioctl( sfd, SIOCGIFFLAGS, &nic ) < 0 ){
+		close( sfd );
+		return false;
+	}
+
+	if( value )
+		nic.ifr_flags |= IFF_PROMISC;
+	else
+		nic.ifr_flags &= ~IFF_PROMISC;
+
+	if( ioctl( sfd, SIOCSIFFLAGS, &nic ) < 0 ){
+		close( sfd );
+		return false;
+	}
+	close( sfd );
+	return true;
+}
+

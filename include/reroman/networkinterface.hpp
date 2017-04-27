@@ -60,7 +60,7 @@ namespace reroman
 		 * @throw std::system_error si no se puede obtener la dirección
 		 * requerida.
 		 */
-		IPv4Addr getAddress( void );
+		IPv4Addr getAddress( void ) const;
 
 		/**
 		 * @brief Obtiene la máscara de subred asignada a la interfaz.
@@ -68,7 +68,7 @@ namespace reroman
 		 * @throw std::system_error si no se puede obtener la dirección
 		 * requerida.
 		 */
-		IPv4Addr getNetmask( void );
+		IPv4Addr getNetmask( void ) const;
 
 		/**
 		 * @brief Obtiene la dirección física asignada a la interfaz.
@@ -76,7 +76,28 @@ namespace reroman
 		 * @throw std::system_error si no se puede obtener la dirección
 		 * requerida.
 		 */
-		HwAddr getHwAddress( void );
+		HwAddr getHwAddress( void ) const;
+
+		/**
+		 * @brief Verifica si la interfaz está en modo promiscuo.
+		 * @return Verdadero si se encuentra en modo promiscuo, falso
+		 * en caso contrario.
+		 * @throw std::system_error si ocurre algún error.
+		 */
+		bool isPromiscModeEnabled( void ) const;
+
+
+		//===============================================================
+		//							Setters
+		//===============================================================
+		/**
+		 * @brief Activa/desactiva el modo promiscuo.
+		 * @param value Un valor verdadero activa el modo promiscuo, un
+		 * valor falso lo desactiva.
+		 * @return Verdadero si la acción se completó con éxito, falso
+		 * en caso contrario.
+		 */
+		bool setPromiscMode( bool value );
 
 	private:
 		std::string name;
@@ -97,17 +118,17 @@ namespace reroman
 		return index;
 	}
 
-	inline IPv4Addr NetworkInterface::getAddress( void )
+	inline IPv4Addr NetworkInterface::getAddress( void ) const
 	{
 		return IPv4Addr::getFromInterface( name );
 	}
 
-	inline IPv4Addr NetworkInterface::getNetmask( void )
+	inline IPv4Addr NetworkInterface::getNetmask( void ) const
 	{
 		return IPv4Addr::getNmaskFromInterface( name );
 	}
 
-	inline HwAddr NetworkInterface::getHwAddress( void )
+	inline HwAddr NetworkInterface::getHwAddress( void ) const
 	{
 		return HwAddr::getFromInterface( name );
 	}
