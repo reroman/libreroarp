@@ -2,6 +2,7 @@ add_library( reroarp
 	ipv4addr.cpp
 	hwaddr.cpp
 	networkinterface.cpp
+	arp.cpp
 )
 
 if( SQLITE3_FOUND )
