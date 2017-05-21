@@ -23,7 +23,12 @@ namespace reroman
 		//							Constructores
 		//===============================================================
 		/**
-		 * @brief Obtiene los datos de una interfaz de red en el sistema
+		 * @brief Crea un objeto sin estar asociado a alguna interfaz de red.
+		 */
+		NetworkInterface( void ) = default;
+
+		/**
+		 * @brief Crea un objeto y lo asocia a una interfaz de red en el sistema
 		 * a partir de su nombre.
 		 * @param ifname Nombre de la interfaz de red.
 		 * @throw std::system_error si el nombre de la interfaz no existe.
@@ -86,6 +91,13 @@ namespace reroman
 		 */
 		bool isPromiscModeEnabled( void ) const;
 
+		/**
+		 * @brief Determina si el objeto se encuentra asociado a una interfaz
+		 * de red en el sistema.
+		 * @return Verdadero si se encuentra asociado, falso en caso contrario.
+		 */
+		bool isBinded( void ) const;
+
 
 		//===============================================================
 		//							Setters
@@ -99,9 +111,24 @@ namespace reroman
 		 */
 		bool setPromiscMode( bool value );
 
+		/**
+		 * @brief Asocia el objeto a una interfaz de red en el sistema.
+		 * @param ifname Nombre de la interfaz de red.
+		 * @return Verdadero si se hizo la asociación, falso en caso contrario.
+		 */
+		bool bind( std::string ifname );
+
+		/**
+		 * @brief Asocia el objeto a una interfaz de red en el sistema.
+		 * @param index Índice de la interfaz de red.
+		 * @return Verdadero si se hizo la asociación, falso en caso contrario.
+		 */
+		bool bind( int index );
+
 	private:
 		std::string name;
 		int index;
+		bool binded = false;
 	};
 
 
@@ -131,6 +158,11 @@ namespace reroman
 	inline HwAddr NetworkInterface::getHwAddress( void ) const
 	{
 		return HwAddr::getFromInterface( name );
+	}
+
+	inline bool NetworkInterface::isBinded( void ) const
+	{
+		return binded;
 	}
 } // namespace reroman
 

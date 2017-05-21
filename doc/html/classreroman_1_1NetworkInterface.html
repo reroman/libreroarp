@@ -102,8 +102,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
+<tr class="memitem:a29767b2d453de2aa3c29581d87198a12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29767b2d453de2aa3c29581d87198a12"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1NetworkInterface.html#a29767b2d453de2aa3c29581d87198a12">NetworkInterface</a> (void)=default</td></tr>
+<tr class="memdesc:a29767b2d453de2aa3c29581d87198a12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un objeto sin estar asociado a alguna interfaz de red. <br /></td></tr>
+<tr class="separator:a29767b2d453de2aa3c29581d87198a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad79e55b86f72faa0f8fa34111f84a810"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1NetworkInterface.html#ad79e55b86f72faa0f8fa34111f84a810">NetworkInterface</a> (std::string ifname)</td></tr>
-<tr class="memdesc:ad79e55b86f72faa0f8fa34111f84a810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene los datos de una interfaz de red en el sistema a partir de su nombre.  <a href="#ad79e55b86f72faa0f8fa34111f84a810">Más...</a><br /></td></tr>
+<tr class="memdesc:ad79e55b86f72faa0f8fa34111f84a810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un objeto y lo asocia a una interfaz de red en el sistema a partir de su nombre.  <a href="#ad79e55b86f72faa0f8fa34111f84a810">Más...</a><br /></td></tr>
 <tr class="separator:ad79e55b86f72faa0f8fa34111f84a810"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8e6e4af32a63325bbec0b0818fc5d08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1NetworkInterface.html#aa8e6e4af32a63325bbec0b0818fc5d08">NetworkInterface</a> (int index)</td></tr>
 <tr class="memdesc:aa8e6e4af32a63325bbec0b0818fc5d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene los datos de una interfaz de red en el sistema a partir de su índice.  <a href="#aa8e6e4af32a63325bbec0b0818fc5d08">Más...</a><br /></td></tr>
@@ -126,9 +130,18 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:ab2bff318a122abae1e92e6adb7fae220"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1NetworkInterface.html#ab2bff318a122abae1e92e6adb7fae220">isPromiscModeEnabled</a> (void) const </td></tr>
 <tr class="memdesc:ab2bff318a122abae1e92e6adb7fae220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si la interfaz está en modo promiscuo.  <a href="#ab2bff318a122abae1e92e6adb7fae220">Más...</a><br /></td></tr>
 <tr class="separator:ab2bff318a122abae1e92e6adb7fae220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a331e5c8186c0e51f2853bcfc7064cd17"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1NetworkInterface.html#a331e5c8186c0e51f2853bcfc7064cd17">isBinded</a> (void) const </td></tr>
+<tr class="memdesc:a331e5c8186c0e51f2853bcfc7064cd17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determina si el objeto se encuentra asociado a una interfaz de red en el sistema.  <a href="#a331e5c8186c0e51f2853bcfc7064cd17">Más...</a><br /></td></tr>
+<tr class="separator:a331e5c8186c0e51f2853bcfc7064cd17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a677bc91b20078eb7eec1ca7f60329439"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1NetworkInterface.html#a677bc91b20078eb7eec1ca7f60329439">setPromiscMode</a> (bool value)</td></tr>
 <tr class="memdesc:a677bc91b20078eb7eec1ca7f60329439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activa/desactiva el modo promiscuo.  <a href="#a677bc91b20078eb7eec1ca7f60329439">Más...</a><br /></td></tr>
 <tr class="separator:a677bc91b20078eb7eec1ca7f60329439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c31863b7be0ea159318b27ecca6b432"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1NetworkInterface.html#a2c31863b7be0ea159318b27ecca6b432">bind</a> (std::string ifname)</td></tr>
+<tr class="memdesc:a2c31863b7be0ea159318b27ecca6b432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asocia el objeto a una interfaz de red en el sistema.  <a href="#a2c31863b7be0ea159318b27ecca6b432">Más...</a><br /></td></tr>
+<tr class="separator:a2c31863b7be0ea159318b27ecca6b432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcc2d9e85d622fe03370e52039183b7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1NetworkInterface.html#afcc2d9e85d622fe03370e52039183b7d">bind</a> (int index)</td></tr>
+<tr class="memdesc:afcc2d9e85d622fe03370e52039183b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asocia el objeto a una interfaz de red en el sistema.  <a href="#afcc2d9e85d622fe03370e52039183b7d">Más...</a><br /></td></tr>
+<tr class="separator:afcc2d9e85d622fe03370e52039183b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Representación de una interfaz de red en el sistema. </p>
@@ -155,7 +168,7 @@ Métodos públicos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Obtiene los datos de una interfaz de red en el sistema a partir de su nombre. </p>
+<p>Crea un objeto y lo asocia a una interfaz de red en el sistema a partir de su nombre. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">ifname</td><td>Nombre de la interfaz de red. </td></tr>
@@ -210,6 +223,56 @@ Métodos públicos</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="a2c31863b7be0ea159318b27ecca6b432"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool reroman::NetworkInterface::bind </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ifname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Asocia el objeto a una interfaz de red en el sistema. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ifname</td><td>Nombre de la interfaz de red. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Verdadero si se hizo la asociación, falso en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afcc2d9e85d622fe03370e52039183b7d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool reroman::NetworkInterface::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Asocia el objeto a una interfaz de red en el sistema. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Índice de la interfaz de red. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Verdadero si se hizo la asociación, falso en caso contrario. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a48568ff3a0e78873c2ea5f50c0b32bd2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -360,6 +423,33 @@ Métodos públicos</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a331e5c8186c0e51f2853bcfc7064cd17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool reroman::NetworkInterface::isBinded </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determina si el objeto se encuentra asociado a una interfaz de red en el sistema. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Verdadero si se encuentra asociado, falso en caso contrario. </dd></dl>
 
 </div>
 </div>

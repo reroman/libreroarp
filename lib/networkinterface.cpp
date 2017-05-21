@@ -14,44 +14,17 @@ using namespace reroman;
 
 
 NetworkInterface::NetworkInterface( string ifname )
-	: name( ifname ),
-	  index( 0 )
 {
-	struct ifreq nic;
-	int sfd = socket( AF_INET, SOCK_DGRAM, 0 );
-
-	if( sfd < 0 )
-		throw system_error( errno, generic_category(), "socket" );
-
-	if( name.size() >= IFNAMSIZ )
-		name.resize( IFNAMSIZ - 1 );
-
-	strcpy( nic.ifr_name, name.c_str() );
-	if( ioctl( sfd, SIOCGIFINDEX, &nic ) < 0 ){
-		close( sfd );
-		throw system_error( errno, generic_category(), name );
-	}
-	close( sfd );
-	index = nic.ifr_ifindex;
+	if( !bind( ifname ) )
+		throw system_error( errno, generic_category(), 
+				"NetworkInterface(" + ifname + ")" );
 }
 
 NetworkInterface::NetworkInterface( int index )
-	: name( "" ),
-	index( index )
 {
-	struct ifreq nic;
-	int sfd = socket( AF_INET, SOCK_DGRAM, 0 );
-
-	if( sfd < 0 )
-		throw system_error( errno, generic_category(), "socket" );
-
-	nic.ifr_ifindex = index;
-	if( ioctl( sfd, SIOCGIFNAME, &nic ) < 0 ){
-		close( sfd );
-		throw system_error( errno, generic_category(), "invalid index" );
-	}
-	close( sfd );
-	name = nic.ifr_name;
+	if( !bind( index ) )
+		throw system_error( errno, generic_category(),
+				"NetworkInterface(" + to_string(index) + ")" );
 }
 
 bool NetworkInterface::isPromiscModeEnabled( void ) const
@@ -99,3 +72,45 @@ bool NetworkInterface::setPromiscMode( bool value )
 	return true;
 }
 
+bool NetworkInterface::bind( string ifname )
+{
+	struct ifreq nic;
+	int sfd = socket( AF_INET, SOCK_DGRAM, 0 );
+
+	if( sfd < 0 )
+		return false;
+
+	if( ifname.size() >= IFNAMSIZ )
+		ifname.resize( IFNAMSIZ - 1 );
+
+	strcpy( nic.ifr_name, ifname.c_str() );
+	if( ioctl( sfd, SIOCGIFINDEX, &nic ) < 0 ){
+		close( sfd );
+		return false;
+	}
+	close( sfd );
+	name = ifname;
+	index = nic.ifr_ifindex;
+	binded = true;
+	return true;
+}
+
+bool NetworkInterface::bind( int index )
+{
+	struct ifreq nic;
+	int sfd = socket( AF_INET, SOCK_DGRAM, 0 );
+
+	if( sfd < 0 )
+		return false;
+
+	nic.ifr_ifindex = index;
+	if( ioctl( sfd, SIOCGIFNAME, &nic ) < 0 ){
+		close( sfd );
+		return false;
+	}
+	close( sfd );
+	name = nic.ifr_name;
+	this->index = index;
+	binded = true;
+	return true;
+}
