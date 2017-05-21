@@ -13,7 +13,7 @@ int main( int argc, char **argv )
 	}
 	try{
 		NetworkInterface nic( argv[1] );
-		ARPSocket sock( 200 );
+		ARPSocket sock( 100 );
 		int hostsUp = 0;
 
 		auto ipLocal = nic.getAddress();
@@ -33,5 +33,6 @@ int main( int argc, char **argv )
 	}
 	catch( system_error &e ){
 		cerr << e.what() << endl;
+		exit( EXIT_FAILURE );
 	}
 }

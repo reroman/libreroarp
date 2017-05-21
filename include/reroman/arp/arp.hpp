@@ -92,7 +92,7 @@ namespace reroman
 		 * @brief Define una trama ARP
 		 * @headerfile arp.hpp <reroman/arp/arp.hpp>
 		 */
-		class __attribute__((packed)) ARPFrame final
+		class ARPFrame final
 		{
 			friend class ARPSocket;
 		public:
