@@ -49,8 +49,6 @@ namespace reroman{ class HwAddr; }
 
 /**
  * @brief Coloca una dirección física en un flujo de salida.
- * @details La dirección es insertada en flujo de salida, además
- * del vendedor entre paréntesis.
  * @param out Flujo de salida en el cual se insertará la dirección física.
  * @param addr Dirección que se insertará en el flujo de salida.
  * @return Una referencia a out.
@@ -150,15 +148,6 @@ namespace reroman
 		 * [0,HwAddrLen].
 		 */
 		uint8_t getByte( unsigned int index ) const;
-
-		/**
-		 * @brief Obtiene el nombre del vendedor del dispositivo.
-		 * @details La consulta se hace desde el archivo vendors.db. Si
-		 * el archivo o la dirección física no es encontrada la función devuelve
-		 * "Unknown". Se debe haber compilado con la opción ENABLE_VENDORS.
-		 * @return Una cadena con el nombre del vendedor.
-		 */
-		std::string getVendor( void ) const;
 
 		/**
 		 * @brief Copia los valores de la dirección física a un arreglo de bytes.
@@ -315,7 +304,7 @@ namespace reroman
 
 inline std::ostream& operator <<( std::ostream &out, const reroman::HwAddr &addr )
 {
-	out << addr.toString() << " (" << addr.getVendor() << ')';
+	out << addr.toString();
 	return out;
 }
 

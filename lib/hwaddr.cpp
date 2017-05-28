@@ -14,14 +14,6 @@
 #include <sys/ioctl.h>
 #include <net/if.h>
 
-#include <config.hpp>
-#ifdef ENABLE_VENDORS
-#include <sqlite3.h>
-#define DBVENDORS	"vendors.db"
-#else
-# warning "VENDORS_DISABLED"
-#endif
-
 using namespace std;
 using namespace reroman;
 
@@ -77,37 +69,6 @@ string HwAddr::toString( void ) const
 			out << ':';
 	}
 	return out.str();
-}
-
-
-string HwAddr::getVendor( void ) const
-{
-	string vendor( "Unknown" );
-#ifdef ENABLE_VENDORS
-	sqlite3 *db;
-	ostringstream sql;
-
-	if( sqlite3_open_v2( DBVENDORS, &db,
-				SQLITE_OPEN_READONLY, NULL ) != SQLITE_OK )
-		return vendor;
-
-	sql << "SELECT vendor FROM Vendors WHERE mac='"
-		<< uppercase << hex;
-	for( int i = 0 ; i < HwAddrLen / 2 ; i++ ){
-		sql.fill( '0' );
-		sql.width( 2 );
-		sql << static_cast<int>( data[i] );
-	}
-	sql << "' LIMIT 1";
-
-	sqlite3_exec( db, sql.str().c_str(), 
-			[]( void *strvendor, int, char **value, char** ) -> int{
-			static_cast<string*>( strvendor )->operator=( *value );
-			return 0;
-			}, &vendor, NULL );
-	sqlite3_close( db );
-#endif
-	return vendor;
 }
 
 void HwAddr::setData( string addr )

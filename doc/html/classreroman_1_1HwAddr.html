@@ -136,9 +136,6 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:a150a5af7c7d17049384a5799b704d560"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1HwAddr.html#a150a5af7c7d17049384a5799b704d560">getByte</a> (unsigned int index) const </td></tr>
 <tr class="memdesc:a150a5af7c7d17049384a5799b704d560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el valor de un byte de la dirección física.  <a href="#a150a5af7c7d17049384a5799b704d560">Más...</a><br /></td></tr>
 <tr class="separator:a150a5af7c7d17049384a5799b704d560"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e8d98580a50dde01b73b437fa142cde"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1HwAddr.html#a6e8d98580a50dde01b73b437fa142cde">getVendor</a> (void) const </td></tr>
-<tr class="memdesc:a6e8d98580a50dde01b73b437fa142cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el nombre del vendedor del dispositivo.  <a href="#a6e8d98580a50dde01b73b437fa142cde">Más...</a><br /></td></tr>
-<tr class="separator:a6e8d98580a50dde01b73b437fa142cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b97877a21953b455cd1648ff25f3417"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreroman_1_1HwAddr.html#a7b97877a21953b455cd1648ff25f3417">copyTo</a> (uint8_t *bytes) const </td></tr>
 <tr class="memdesc:a7b97877a21953b455cd1648ff25f3417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copia los valores de la dirección física a un arreglo de bytes.  <a href="#a7b97877a21953b455cd1648ff25f3417">Más...</a><br /></td></tr>
 <tr class="separator:a7b97877a21953b455cd1648ff25f3417"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -469,25 +466,6 @@ Amigas</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="a6e8d98580a50dde01b73b437fa142cde"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string reroman::HwAddr::getVendor </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Obtiene el nombre del vendedor del dispositivo. </p>
-<p>La consulta se hace desde el archivo vendors.db. Si el archivo o la dirección física no es encontrada la función devuelve "Unknown". Se debe haber compilado con la opción ENABLE_VENDORS. </p><dl class="section return"><dt>Devuelve</dt><dd>Una cadena con el nombre del vendedor. </dd></dl>
 
 </div>
 </div>
@@ -843,7 +821,7 @@ Amigas</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Coloca una dirección física en un flujo de salida. </p>
-<p>La dirección es insertada en flujo de salida, además del vendedor entre paréntesis. </p><dl class="params"><dt>Parámetros</dt><dd>
+<dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">out</td><td>Flujo de salida en el cual se insertará la dirección física. </td></tr>
     <tr><td class="paramname">addr</td><td>Dirección que se insertará en el flujo de salida. </td></tr>

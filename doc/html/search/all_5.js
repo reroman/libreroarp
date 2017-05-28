@@ -20,6 +20,5 @@ var searchData=
   ['getsystementry',['getSystemEntry',['../namespacereroman_1_1arp.html#ac34adfb9aab9879e4b9638b1029a1f91',1,'reroman::arp']]],
   ['gettargethwaddr',['getTargetHwAddr',['../classreroman_1_1arp_1_1ARPFrame.html#aec7951ec19cfa25c3267005eea41aeb9',1,'reroman::arp::ARPFrame']]],
   ['gettargetipaddr',['getTargetIPAddr',['../classreroman_1_1arp_1_1ARPFrame.html#af87072a157489cb5226c59d1f26a719e',1,'reroman::arp::ARPFrame']]],
-  ['gettimeout',['getTimeout',['../classreroman_1_1arp_1_1ARPSocket.html#ae4216b2edec422a028a38ff24b74466d',1,'reroman::arp::ARPSocket']]],
-  ['getvendor',['getVendor',['../classreroman_1_1HwAddr.html#a6e8d98580a50dde01b73b437fa142cde',1,'reroman::HwAddr']]]
+  ['gettimeout',['getTimeout',['../classreroman_1_1arp_1_1ARPSocket.html#ae4216b2edec422a028a38ff24b74466d',1,'reroman::arp::ARPSocket']]]
 ];
