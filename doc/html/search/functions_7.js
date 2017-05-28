@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['networkinterface',['NetworkInterface',['../classreroman_1_1NetworkInterface.html#a29767b2d453de2aa3c29581d87198a12',1,'reroman::NetworkInterface::NetworkInterface(void)=default'],['../classreroman_1_1NetworkInterface.html#ad79e55b86f72faa0f8fa34111f84a810',1,'reroman::NetworkInterface::NetworkInterface(std::string ifname)'],['../classreroman_1_1NetworkInterface.html#aa8e6e4af32a63325bbec0b0818fc5d08',1,'reroman::NetworkInterface::NetworkInterface(int index)']]]
+  ['makebroadcast',['makeBroadcast',['../classreroman_1_1IPv4Addr.html#a0fcda1f2cfbd38e3b0679dbb9a8082f3',1,'reroman::IPv4Addr']]],
+  ['makenetaddress',['makeNetAddress',['../classreroman_1_1IPv4Addr.html#a89d6f52430f88f6ab74d6051a8940b56',1,'reroman::IPv4Addr']]]
 ];

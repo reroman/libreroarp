@@ -8,12 +8,94 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <linux/if_packet.h>
+#include <linux/if_arp.h>
 #include <net/ethernet.h>
+#include <sys/ioctl.h>
 
 using namespace std;
 using namespace reroman;
 using namespace reroman::arp;
 
+namespace reroman{
+	namespace arp{
+		bool addStaticSystemEntry( const reroman::NetworkInterface &nic,
+				const reroman::IPv4Addr &ip, const reroman::HwAddr &hw )
+		{
+			if( !nic.isBinded() ){
+				errno = EINVAL;
+				return false;
+			}
+
+			struct arpreq arp;
+			int sock = socket( AF_INET, SOCK_DGRAM, 0 );
+
+			arp.arp_pa.sa_family = AF_INET;
+			memcpy( arp.arp_pa.sa_data + 2, &ip.getInAddr(),
+					IPv4Addr::IPv4AddrLen );
+			arp.arp_ha.sa_family = ARPHRD_ETHER;
+			hw.copyTo( reinterpret_cast<uint8_t*>(arp.arp_ha.sa_data) );
+			strcpy( arp.arp_dev, nic.getName().c_str() );
+			arp.arp_flags = ATF_COM | ATF_PERM;
+
+			if( ioctl( sock, SIOCSARP, &arp ) == -1 ){
+				close( sock );
+				return false;
+			}
+			close( sock );
+			return true;
+		}
+
+		bool delSystemEntry( const reroman::NetworkInterface &nic,
+				const reroman::IPv4Addr &ip )
+		{
+			if( !nic.isBinded() ){
+				errno = EINVAL;
+				return false;
+			}
+
+			struct arpreq arp;
+			int sock = socket( AF_INET, SOCK_DGRAM, 0 );
+
+			arp.arp_pa.sa_family = AF_INET;
+			memcpy( arp.arp_pa.sa_data + 2, &ip.getInAddr(),
+					IPv4Addr::IPv4AddrLen );
+			strcpy( arp.arp_dev, nic.getName().c_str() );
+			arp.arp_flags = 0;
+
+			if( ioctl( sock, SIOCDARP, &arp ) == -1 ){
+				close( sock );
+				return false;
+			}
+			close( sock );
+			return true;
+		}
+
+		reroman::HwAddr getSystemEntry( const reroman::NetworkInterface &nic,
+				const reroman::IPv4Addr &ip )
+		{
+			if( !nic.isBinded() )
+				throw invalid_argument( "Invalid network interface" );
+
+			struct arpreq arp;
+			int sock = socket( AF_INET, SOCK_DGRAM, 0 );
+
+			arp.arp_pa.sa_family = AF_INET;
+			memcpy( arp.arp_pa.sa_data + 2, &ip.getInAddr(),
+					IPv4Addr::IPv4AddrLen );
+			strcpy( arp.arp_dev, nic.getName().c_str() );
+			arp.arp_flags = 0;
+
+			if( ioctl( sock, SIOCGARP, &arp ) == -1 ){
+				close( sock );
+				if( errno == ENXIO )
+					throw out_of_range( ip.toString() + " not found in the ARP cache" );
+				throw system_error( errno, generic_category(), "getSystemEntry" );
+			}
+			close( sock );
+			return reroman::HwAddr( reinterpret_cast<uint8_t*>(arp.arp_ha.sa_data) );
+		}
+	}
+}
 
 ARPSocket::ARPSocket( unsigned int msecs )
 {

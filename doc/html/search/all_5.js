@@ -17,6 +17,7 @@ var searchData=
   ['getprotocollen',['getProtocolLen',['../classreroman_1_1arp_1_1ARPFrame.html#a7a6a2058b359957b8f0164f17ed138f8',1,'reroman::arp::ARPFrame']]],
   ['getsourcehwaddr',['getSourceHwAddr',['../classreroman_1_1arp_1_1ARPFrame.html#abae5edeea511451e658e51dc6c643394',1,'reroman::arp::ARPFrame']]],
   ['getsourceipaddr',['getSourceIPAddr',['../classreroman_1_1arp_1_1ARPFrame.html#ab2a8703b78e99d1fd743dff8efc74b38',1,'reroman::arp::ARPFrame']]],
+  ['getsystementry',['getSystemEntry',['../namespacereroman_1_1arp.html#ac34adfb9aab9879e4b9638b1029a1f91',1,'reroman::arp']]],
   ['gettargethwaddr',['getTargetHwAddr',['../classreroman_1_1arp_1_1ARPFrame.html#aec7951ec19cfa25c3267005eea41aeb9',1,'reroman::arp::ARPFrame']]],
   ['gettargetipaddr',['getTargetIPAddr',['../classreroman_1_1arp_1_1ARPFrame.html#af87072a157489cb5226c59d1f26a719e',1,'reroman::arp::ARPFrame']]],
   ['gettimeout',['getTimeout',['../classreroman_1_1arp_1_1ARPSocket.html#ae4216b2edec422a028a38ff24b74466d',1,'reroman::arp::ARPSocket']]],

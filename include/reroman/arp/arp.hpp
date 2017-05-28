@@ -49,6 +49,44 @@ namespace reroman
 	namespace arp
 	{
 		class ARPSocket;
+
+		/**
+		 * @brief Agrega una entrada ethernet estática a la cache ARP del
+		 * sistema.
+		 * @details Modificar la cache del sistema requiere permisos de superusuario.
+		 * @param nic Interfaz de red a la cual agregar la nueva entrada.
+		 * @param ip Dirección IP a la cual pertenece el registro.
+		 * @param hw Dirección física a la cual está asociada la IP.
+		 * @return Verdadero si la entrada se agregó con éxito, falso en caso
+		 * contrario.
+		 */
+		bool addStaticSystemEntry( const reroman::NetworkInterface &nic,
+				const IPv4Addr &ip, const reroman::HwAddr &hw );
+
+		/**
+		 * @brief Elimina una entrada de la cache ARP del sistema.
+		 * @details Modificar la cache del sistema requiere permisos de superusuario.
+		 * @param nic Interfaz de red de la cual eliminar el registro.
+		 * @param ip Dirección IP de la entrada a eliminar.
+		 * @return Verdadero si la entrada se eliminó con éxito, falso en caso
+		 * contrario.
+		 */
+		bool delSystemEntry( const reroman::NetworkInterface &nic,
+				const reroman::IPv4Addr &ip );
+
+		/**
+		 * @brief Obtiene una dirección MAC desde la cache del sistema dada
+		 * una dirección IP.
+		 * @param nic Interfaz de red asociada al registro.
+		 * @param ip Dirección IP de la cual se desea conocer la dirección física.
+		 * @return La dirección física en cache de la dirección IP.
+		 * @throw std::invalid_argument Si la interfaz de red no es válida.
+		 * @throw std::out_of_range Si la IP no se encuentra en la caché del sistema.
+		 * @throw std::system_error Si ocurriese alǵún error.
+		 */
+		reroman::HwAddr getSystemEntry( const reroman::NetworkInterface &nic,
+				const reroman::IPv4Addr &ip );
+
 		/**
 		 * @brief Códigos de operación para el protocolo ARP.
 		 */
