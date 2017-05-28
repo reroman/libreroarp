@@ -80,7 +80,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="title">libreroarp </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A simple library for ARP protocol </p>
+<div class="textblock"><p>Una sencilla biblioteca para manipular el protocolo ARP en sistemas Linux.</p>
+<h2>El protocolo ARP</h2>
+<p>Es el responsable de encontrar una dirección física que corresponde a una dirección IP en una red de computadoras.</p>
+<p>Una trama ARP consta de los siguientes campos:</p>
+<ul>
+<li>Tipo de hardware en la red.</li>
+<li>Tipo de protocolo.</li>
+<li>Longitud de la dirección física en bytes.</li>
+<li>Longitud de la dirección de protocolo en bytes.</li>
+<li>Operación.</li>
+<li>Dirección física del remitente.</li>
+<li>Dirección de protocolo del remitente.</li>
+<li>Dirección física del destinatario</li>
+<li>Dirección de protocolo del destinatario</li>
+</ul>
+<h2>Dependencias</h2>
+<ul>
+<li>CMake &gt;= 3.5</li>
+<li>libBoost &gt;= 1.58</li>
+<li>Soporte completo para C++11</li>
+</ul>
+<h2>Compilación e Instalación</h2>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git clone https://github.com/reroman/libreroarp.git</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;$ cd libreroarp/</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;$ mkdir build</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;$ cd build/</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;$ cmake ..</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;$ make</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;# make install</div></div><!-- fragment --><p>Por defecto se construyen algunos ejemplos incluídos, para desactivarlos ejecuta lo siguiente en lugar del quinto comando de arriba: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ cmake -DBUILD_EXAMPLES=false ..</div></div><!-- fragment --><h2>Uso</h2>
+<p>La documentación generalmente se instala en la carpeta: /usr/local/share/libreroarp/doc/html/index.html</p>
+<p>El enlazado de la biblioteca se hace con -lreroarp, por ejemplo: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ g++ -std=c++11 example.cpp -o example -lreroarp</div></div><!-- fragment --><h2>Autor</h2>
+<p>Ricardo Román &lt;<a href="#" onclick="location.href='mai'+'lto:'+'rer'+'om'+'an4'+'@g'+'mai'+'l.'+'com'; return false;">reroman4@gmail.com</a>&gt; </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

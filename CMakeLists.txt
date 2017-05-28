@@ -22,3 +22,7 @@ add_library( reroarp
 if( BUILD_EXAMPLES )
 	add_subdirectory( examples )
 endif()
+
+install( TARGETS reroarp ARCHIVE DESTINATION lib )
+install( DIRECTORY include/ DESTINATION include )
+install( DIRECTORY doc DESTINATION share/${PROJECT_NAME} )

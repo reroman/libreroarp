@@ -13,7 +13,7 @@ int main( int argc, char **argv )
 	}
 	try{
 		NetworkInterface nic( argv[1] );
-		ARPSocket sock( 100 );
+		ARPSocket sock( 150 );
 		int hostsUp = 0;
 
 		auto ipLocal = nic.getAddress();

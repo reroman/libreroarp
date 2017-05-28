@@ -43,7 +43,7 @@
 namespace reroman
 {
 	/**
-	 * @brief Define tipos y enumeraciones para el protocolo
+	 * @brief Define tipos, enumeraciones y funciones  para el protocolo
 	 * ARP.
 	 */
 	namespace arp
